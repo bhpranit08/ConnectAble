@@ -156,16 +156,28 @@ const Jobs = () => {
     return (
         <div className="p-4 sm:p-6 min-h-screen">
             <div className="mb-8 sm:mb-12 text-center animate-fade-in">
-                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-100 to-purple-100 px-4 py-2 rounded-full mb-4">
-                    <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
-                    </svg>
-                    <span className="text-indigo-700 font-medium text-sm">Inclusive Employment</span>
+                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-green-100 px-4 py-2 rounded-full mb-4">
+                    <span className="text-2xl">♿</span>
+                    <span className="text-blue-700 font-medium text-sm">Disability-Inclusive Employment in Nepal</span>
                 </div>
-                <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">Job Opportunities</h1>
-                <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-                    Find inclusive employment opportunities designed for people with disabilities in Nepal
+                <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 via-green-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                    🇳🇵 Accessible Jobs Nepal
+                </h1>
+                <div className="flex justify-center items-center space-x-4 mb-4">
+                    <span className="text-2xl">💼</span>
+                    <span className="text-2xl">🦽</span>
+                    <span className="text-2xl">🤝</span>
+                    <span className="text-2xl">🏢</span>
+                </div>
+                <p className="text-gray-700 text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed mb-4">
+                    <strong>Jobs specifically designed for people with disabilities in Nepal.</strong><br/>
+                    Every position includes detailed accessibility accommodations and inclusive workplace practices.
                 </p>
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-4 max-w-2xl mx-auto">
+                    <p className="text-green-800 font-medium">
+                        🌟 All employers verified for disability inclusion and accessibility 🛠️
+                    </p>
+                </div>
             </div>
 
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl shadow-xl p-4 sm:p-6 mb-8 border border-white/30">

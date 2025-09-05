@@ -28,8 +28,8 @@ export const jobListings = [
             assistiveTech: true,
             mentalHealthSupport: true
         },
-        postedDate: "2024-01-15",
-        applicationDeadline: "2024-02-15",
+        postedDate: "2025-01-15",
+        applicationDeadline: "2025-02-15",
         contactEmail: "jobs@nepaltechsolutions.com.np",
         companyWebsite: "https://nepaltechsolutions.com.np"
     },
@@ -63,8 +63,8 @@ export const jobListings = [
             assistiveTech: true,
             mentalHealthSupport: true
         },
-        postedDate: "2024-01-12",
-        applicationDeadline: "2024-02-12",
+        postedDate: "2025-01-12",
+        applicationDeadline: "2025-02-12",
         contactEmail: "hr@accessiblenepal.com.np",
         companyWebsite: "https://accessiblenepal.com.np"
     },
@@ -98,8 +98,8 @@ export const jobListings = [
             assistiveTech: true,
             mentalHealthSupport: true
         },
-        postedDate: "2024-01-10",
-        applicationDeadline: "2024-02-10",
+        postedDate: "2025-01-10",
+        applicationDeadline: "2025-02-10",
         contactEmail: "careers@himalayancreative.com.np",
         companyWebsite: "https://himalayancreative.com.np"
     },
@@ -133,8 +133,8 @@ export const jobListings = [
             assistiveTech: true,
             mentalHealthSupport: false
         },
-        postedDate: "2024-01-08",
-        applicationDeadline: "2024-02-08",
+        postedDate: "2025-01-08",
+        applicationDeadline: "2025-02-08",
         contactEmail: "jobs@nepalinclusivedata.com.np",
         companyWebsite: "https://nepalinclusivedata.com.np"
     },
@@ -168,8 +168,8 @@ export const jobListings = [
             assistiveTech: true,
             mentalHealthSupport: true
         },
-        postedDate: "2024-01-05",
-        applicationDeadline: "2024-02-05",
+        postedDate: "2025-01-05",
+        applicationDeadline: "2025-02-05",
         contactEmail: "careers@nepaldiversitymarketing.com.np",
         companyWebsite: "https://nepaldiversitymarketing.com.np"
     },
@@ -203,8 +203,8 @@ export const jobListings = [
             assistiveTech: true,
             mentalHealthSupport: true
         },
-        postedDate: "2024-01-03",
-        applicationDeadline: "2024-02-03",
+        postedDate: "2025-01-03",
+        applicationDeadline: "2025-02-03",
         contactEmail: "writers@himalayaninclusive.com.np",
         companyWebsite: "https://himalayaninclusive.com.np"
     },
@@ -238,8 +238,8 @@ export const jobListings = [
             assistiveTech: false,
             mentalHealthSupport: true
         },
-        postedDate: "2024-01-01",
-        applicationDeadline: "2024-02-01",
+        postedDate: "2025-01-01",
+        applicationDeadline: "2025-02-01",
         contactEmail: "tourism@nepalaccessibleadventures.com.np",
         companyWebsite: "https://nepalaccessibleadventures.com.np"
     },
@@ -274,7 +274,7 @@ export const jobListings = [
             mentalHealthSupport: true
         },
         postedDate: "2023-12-28",
-        applicationDeadline: "2024-01-28",
+        applicationDeadline: "2025-01-28",
         contactEmail: "education@nepalinclusiveeducation.org.np",
         companyWebsite: "https://nepalinclusiveeducation.org.np"
     }
