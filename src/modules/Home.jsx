@@ -85,58 +85,69 @@ const Home = () => {
     return (
         <div className="p-4 sm:p-6 min-h-screen">
             <div className="mb-8 sm:mb-12 text-center animate-fade-in">
-                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-100 to-purple-100 px-4 py-2 rounded-full mb-4">
-                    <svg className="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-green-100 px-4 py-2 rounded-full mb-4">
+                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                     </svg>
-                    <span className="text-indigo-700 font-medium text-sm">Empowering Nepal's Inclusive Future</span>
+                    <span className="text-blue-700 font-medium text-sm">🦽 Accessibility-First Platform for Nepal</span>
                 </div>
-                <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                    Welcome to ConnectAble
+                <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 via-green-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                    ConnectAble Nepal
                 </h1>
-                <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-                    Your inclusive platform for connecting with opportunities, communities, and support in Nepal. 
-                    Building bridges to a more accessible future.
+                <div className="flex justify-center items-center space-x-4 mb-4">
+                    <span className="text-2xl">♿</span>
+                    <span className="text-2xl">🤝</span>
+                    <span className="text-2xl">💼</span>
+                    <span className="text-2xl">🏠</span>
+                </div>
+                <p className="text-gray-700 text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed mb-4">
+                    <strong>The premier job and community platform for people with disabilities in Nepal.</strong><br/>
+                    Connecting talented individuals with inclusive employers and supportive communities.
                 </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 max-w-2xl mx-auto">
+                    <p className="text-blue-800 font-medium">
+                        🌟 Designed by and for the disability community in Nepal 🇳🇵
+                    </p>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
                 <StatCard
-                    title="Active Jobs"
+                    title="♿ Accessible Jobs"
                     value={jobListings.length}
                     icon={
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                         </svg>
                     }
                     gradient="gradient-blue"
                 />
                 <StatCard
-                    title="Companies"
+                    title="🏢 Inclusive Employers"
                     value="8+"
                     icon={
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
                         </svg>
                     }
                     gradient="gradient-green"
                 />
                 <StatCard
-                    title="Accessibility Features"
-                    value="5+"
+                    title="🛠️ Accommodations"
+                    value="15+"
                     icon={
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
                         </svg>
                     }
                     gradient="gradient-purple"
                 />
                 <StatCard
-                    title="Success Stories"
+                    title="🎉 Success Stories"
                     value="50+"
                     icon={
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                         </svg>
                     }
                     gradient="gradient-orange"
@@ -145,41 +156,52 @@ const Home = () => {
 
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl shadow-xl p-6 sm:p-8 mb-8 sm:mb-12 border border-white/30">
                 <div className="text-center mb-8">
-                    <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">Quick Actions</h2>
-                    <p className="text-gray-600">Get started with these popular features</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">🚀 Start Your Journey</h2>
+                    <p className="text-gray-600">Empowering people with disabilities in Nepal</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <QuickActionCard
-                        title="Browse Jobs"
-                        description="Find inclusive employment opportunities"
+                        title="♿ Find Accessible Jobs"
+                        description="Discover employers committed to disability inclusion"
                         icon={
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                             </svg>
                         }
                         gradient="gradient-blue"
                         onClick={() => window.location.href = '/jobs'}
                     />
                     <QuickActionCard
-                        title="Join Communities"
-                        description="Connect with like-minded individuals"
+                        title="🤝 Join Disability Communities"
+                        description="Connect with others who share your experiences"
                         icon={
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.5 8H16c-.8 0-1.5.7-1.5 1.5v3.5c0 1.1-.9 2-2 2s-2-.9-2-2V10c0-.8-.7-1.5-1.5-1.5H7.5c-.8 0-1.5.7-1.5 1.5v3.5c0 1.1-.9 2-2 2s-2-.9-2-2v-3.5C2 9.7 2.7 9 3.5 9H6c.8 0 1.5-.7 1.5-1.5S6.8 6 6 6H3.5C2.1 6 1 7.1 1 8.5V13c0 2.2 1.8 4 4 4s4-1.8 4-4v-1.5c0-.3.2-.5.5-.5s.5.2.5.5V13c0 2.2 1.8 4 4 4s4-1.8 4-4v-1.5c0-.3.2-.5.5-.5s.5.2.5.5V22h2z"/>
                             </svg>
                         }
                         gradient="gradient-green"
                         onClick={() => window.location.href = '/communities'}
                     />
                     <QuickActionCard
-                        title="Get Support"
-                        description="Access resources and assistance"
+                        title="🛡️ Access Support Services"
+                        description="Get help with accommodations and resources"
                         icon={
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
+                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.1 16,12.7V16.2C16,16.8 15.4,17.3 14.8,17.3H9.2C8.6,17.3 8,16.8 8,16.2V12.7C8,12.1 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"/>
                             </svg>
                         }
                         gradient="gradient-purple"
+                    />
+                    <QuickActionCard
+                        title="💝 Support Community Campaigns"
+                        description="Help fund accessibility equipment and medical needs"
+                        icon={
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        }
+                        gradient="gradient-orange"
+                        onClick={() => window.location.href = '/crowdsourcing'}
                     />
                 </div>
             </div>
@@ -221,36 +243,30 @@ const Home = () => {
 
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl shadow-xl p-6 sm:p-8 border border-white/30">
                 <div className="text-center mb-8">
-                    <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">Why Choose ConnectAble?</h2>
-                    <p className="text-gray-600">Discover what makes us the leading inclusive platform in Nepal</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">🌟 Why ConnectAble Nepal?</h2>
+                    <p className="text-gray-600">The first platform built specifically for Nepal's disability community</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     <div className="text-center group animate-slide-up">
                         <div className="gradient-blue p-4 rounded-2xl w-fit mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+                            <div className="text-white text-2xl">♿</div>
                         </div>
-                        <h3 className="font-bold text-gray-800 mb-3 text-lg">Inclusive Design</h3>
-                        <p className="text-gray-600 leading-relaxed">Built with accessibility in mind, ensuring everyone can participate fully in Nepal's digital economy.</p>
+                        <h3 className="font-bold text-gray-800 mb-3 text-lg">🛠️ Accessibility First</h3>
+                        <p className="text-gray-600 leading-relaxed">Every feature designed with screen readers, keyboard navigation, and assistive technologies in mind.</p>
                     </div>
                     <div className="text-center group animate-slide-up">
                         <div className="gradient-green p-4 rounded-2xl w-fit mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
+                            <div className="text-white text-2xl">🤝</div>
                         </div>
-                        <h3 className="font-bold text-gray-800 mb-3 text-lg">Community Support</h3>
-                        <p className="text-gray-600 leading-relaxed">Connect with others who understand your journey and challenges in a supportive environment.</p>
+                        <h3 className="font-bold text-gray-800 mb-3 text-lg">🏠 Disability Community</h3>
+                        <p className="text-gray-600 leading-relaxed">Connect with others who share similar experiences and challenges in Nepal's disability community.</p>
                     </div>
                     <div className="text-center group animate-slide-up">
                         <div className="gradient-purple p-4 rounded-2xl w-fit mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
+                            <div className="text-white text-2xl">🇳🇵</div>
                         </div>
-                        <h3 className="font-bold text-gray-800 mb-3 text-lg">Nepal-Focused</h3>
-                        <p className="text-gray-600 leading-relaxed">Tailored specifically for the Nepalese job market, culture, and accessibility needs.</p>
+                        <h3 className="font-bold text-gray-800 mb-3 text-lg">🏔️ Nepal-Specific</h3>
+                        <p className="text-gray-600 leading-relaxed">Understanding Nepal's unique challenges, culture, and opportunities for people with disabilities.</p>
                     </div>
                 </div>
             </div>
