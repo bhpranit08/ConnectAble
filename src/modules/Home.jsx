@@ -159,7 +159,7 @@ const Home = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">🚀 Start Your Journey</h2>
                     <p className="text-gray-600">Empowering people with disabilities in Nepal</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <QuickActionCard
                         title="♿ Find Accessible Jobs"
                         description="Discover employers committed to disability inclusion"
@@ -191,6 +191,17 @@ const Home = () => {
                             </svg>
                         }
                         gradient="gradient-purple"
+                    />
+                    <QuickActionCard
+                        title="💝 Support Community Campaigns"
+                        description="Help fund accessibility equipment and medical needs"
+                        icon={
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        }
+                        gradient="gradient-orange"
+                        onClick={() => window.location.href = '/crowdsourcing'}
                     />
                 </div>
             </div>
