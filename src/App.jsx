@@ -8,6 +8,8 @@ import Communities from './modules/Communities'
 import AIAgent from './modules/AIAgent'
 import CommunityDetail from './modules/CommunityDetail'
 import PostDetail from './modules/PostDetail'
+import Crowdsourcing from './modules/Crowdsourcing'
+import CampaignDetail from './modules/CampaignDetail'
 
 function App() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -44,6 +46,8 @@ function App() {
                             <Route path="/communities" element={<Communities />} />
                             <Route path="/communities/:id" element={<CommunityDetail />} />
                             <Route path="/communities/:communityId/posts/:postId" element={<PostDetail />} />
+                            <Route path="/crowdsourcing" element={<Crowdsourcing />} />
+                            <Route path="/crowdsourcing/:id" element={<CampaignDetail />} />
                         </Routes>
                     </main>
                 </div>

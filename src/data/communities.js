@@ -7,7 +7,7 @@ export const communities = [
         postCount: 89,
         category: "Technology",
         createdDate: "2023-08-15",
-        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=200&fit=crop",
+        image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
         tags: ["Technology", "Accessibility", "Nepal", "Programming"],
         rules: [
             "Be respectful and inclusive",
@@ -24,7 +24,7 @@ export const communities = [
         postCount: 156,
         category: "Support",
         createdDate: "2023-06-20",
-        image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=200&fit=crop",
+        image: "https://images.pexels.com/photos/1482783/pexels-photo-1482783.jpeg",
         tags: ["Support", "Disability", "Nepal", "Community"],
         rules: [
             "Be kind and supportive",
@@ -41,7 +41,7 @@ export const communities = [
         postCount: 67,
         category: "Education",
         createdDate: "2023-09-10",
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=200&fit=crop",
+        image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg",
         tags: ["Education", "Students", "Teachers", "Inclusive"],
         rules: [
             "Focus on educational topics",
@@ -58,7 +58,7 @@ export const communities = [
         postCount: 43,
         category: "Travel",
         createdDate: "2023-07-05",
-        image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=200&fit=crop",
+        image: "https://images.pexels.com/photos/11427342/pexels-photo-11427342.jpeg",
         tags: ["Travel", "Tourism", "Accessibility", "Nepal"],
         rules: [
             "Share travel experiences",
@@ -75,7 +75,7 @@ export const communities = [
         postCount: 34,
         category: "Business",
         createdDate: "2023-10-12",
-        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=200&fit=crop",
+        image: "https://images.pexels.com/photos/4063789/pexels-photo-4063789.jpeg",
         tags: ["Business", "Entrepreneurship", "Startup", "Nepal"],
         rules: [
             "Share business insights",
@@ -92,7 +92,7 @@ export const communities = [
         postCount: 78,
         category: "Arts",
         createdDate: "2023-05-18",
-        image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=200&fit=crop",
+        image: "https://images.pexels.com/photos/6153572/pexels-photo-6153572.jpeg",
         tags: ["Art", "Creativity", "Design", "Nepal"],
         rules: [
             "Share original artwork",
@@ -111,7 +111,7 @@ export const posts = [
         content: "I just found out about this amazing web development course that's specifically designed for people with disabilities. The instructor is very experienced with assistive technologies and the course includes all necessary accommodations. The course covers HTML, CSS, JavaScript, and accessibility best practices. Classes start next month and they have scholarships available. Anyone interested?",
         author: {
             name: "Sita Sharma",
-            avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face",
+            avatar: "https://picsum.photos/50/50?random=31",
             role: "Web Developer"
         },
         createdAt: "2024-01-15T10:30:00Z",
@@ -127,7 +127,7 @@ export const posts = [
         content: "I've been working remotely for the past 2 years and it's been amazing for my accessibility needs. I wanted to share some companies that are actively hiring remote developers and are very accommodating. Here are a few I know of: TechForAll Nepal, Accessible Solutions, and Himalayan Creative. They all provide proper equipment and flexible schedules. Has anyone else had good experiences with remote work?",
         author: {
             name: "Rajesh Thapa",
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face",
+            avatar: "https://picsum.photos/50/50?random=32",
             role: "Senior Developer"
         },
         createdAt: "2024-01-14T15:45:00Z",
@@ -143,7 +143,7 @@ export const posts = [
         content: "We're organizing a mental health support group meeting this Saturday at 2 PM in Kathmandu. The meeting will be held at the Nepal Disability Support Center. We'll have a professional counselor present and it's completely free. This is a safe space to share experiences and get support. Please RSVP if you're planning to attend. Refreshments will be provided.",
         author: {
             name: "Priya Gurung",
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face",
+            avatar: "https://picsum.photos/50/50?random=33",
             role: "Community Coordinator"
         },
         createdAt: "2024-01-13T09:20:00Z",

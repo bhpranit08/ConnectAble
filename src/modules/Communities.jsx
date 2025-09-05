@@ -84,12 +84,24 @@ const Communities = () => {
                     <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                    <span className="text-green-700 font-medium text-sm">Building Connections</span>
+                    <span className="text-purple-700 font-medium text-sm">Nepal Disability Communities</span>
                 </div>
-                <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">Communities</h1>
-                <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-                    Connect with like-minded individuals and join communities that share your interests and experiences
+                <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 bg-clip-text text-transparent mb-4">🏠 Disability Communities</h1>
+                <div className="flex justify-center items-center space-x-4 mb-4">
+                    <span className="text-2xl">♿</span>
+                    <span className="text-2xl">👥</span>
+                    <span className="text-2xl">💬</span>
+                    <span className="text-2xl">🇳🇵</span>
+                </div>
+                <p className="text-gray-700 text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed mb-4">
+                    <strong>Safe spaces for Nepal's disability community to connect, share, and support each other.</strong><br />
+                    Join communities based on your interests, disability type, or location in Nepal.
                 </p>
+                <div className="bg-purple-50 border border-purple-200 rounded-2xl p-4 max-w-2xl mx-auto">
+                    <p className="text-purple-800 font-medium">
+                        🛡️ Moderated communities with zero tolerance for discrimination 🌈
+                    </p>
+                </div>
             </div>
 
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl shadow-xl p-4 sm:p-6 mb-8 border border-white/30">
