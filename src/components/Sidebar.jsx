@@ -24,6 +24,15 @@ const Sidebar = ({ isOpen, onClose }) => {
             )
         },
         {
+            name: 'AI Agent',
+            path: '/ai',
+            icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6M13.5 2.5l1 2.5M9.5 2.5l-1 2.5M2.5 9.5l2.5 1M2.5 13.5l2.5-1M21.5 9.5l-2.5 1M21.5 13.5l-2.5-1M9.5 21.5l1-2.5m4 2.5l-1-2.5" />
+                </svg>
+            )
+        },
+        {
             name: 'Communities',
             path: '/communities',
             icon: (

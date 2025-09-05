@@ -3,6 +3,39 @@ import { jobListings } from '../data/jobListings'
 
 const Home = () => {
     const [recentJobs] = useState(jobListings.slice(0, 3)) // Show 3 most recent jobs
+    const [aiMessages, setAiMessages] = useState([
+        { role: 'assistant', text: "Hi! I can help you find jobs, communities, or support. Ask me anything." }
+    ])
+    const [aiInput, setAiInput] = useState('')
+    const [isThinking, setIsThinking] = useState(false)
+
+    const generateAiReply = (text) => {
+        const lower = text.toLowerCase()
+        if (lower.includes('job')) {
+            return "You can browse inclusive roles on the Jobs page. Try filters by category or accessibility."
+        }
+        if (lower.includes('community')) {
+            return "Our Communities section helps you connect with groups and discussions."
+        }
+        if (lower.includes('support') || lower.includes('help')) {
+            return "For assistance, check the Support quick action or tell me what you need."
+        }
+        return "I’m here to help. You can ask about jobs, communities, or resources."
+    }
+
+    const sendAiMessage = (e) => {
+        if (e) e.preventDefault()
+        const text = aiInput.trim()
+        if (!text || isThinking) return
+        setAiMessages(prev => [...prev, { role: 'user', text }])
+        setAiInput('')
+        setIsThinking(true)
+        setTimeout(() => {
+            const reply = generateAiReply(text)
+            setAiMessages(prev => [...prev, { role: 'assistant', text: reply }])
+            setIsThinking(false)
+        }, 600)
+    }
 
     const StatCard = ({ title, value, icon, gradient = "gradient-blue" }) => (
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-4 sm:p-6 hover-lift animate-fade-in border border-white/20">
@@ -251,6 +284,71 @@ const Home = () => {
                         </div>
                         <h3 className="font-bold text-gray-800 mb-3 text-lg">Nepal-Focused</h3>
                         <p className="text-gray-600 leading-relaxed">Tailored specifically for the Nepalese job market, culture, and accessibility needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl shadow-xl p-6 sm:p-8 border border-white/30 mt-8 sm:mt-12">
+                <div className="flex flex-col lg:flex-row gap-6">
+                    <div className="flex-1">
+                        <div className="mb-4">
+                            <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">AI Help</h2>
+                            <p className="text-gray-600">Ask questions about jobs, communities, or support. I’ll guide you.</p>
+                        </div>
+                        <div className="bg-white/80 rounded-2xl border border-white/30 shadow-inner p-4 sm:p-5 h-80 overflow-y-auto space-y-3">
+                            {aiMessages.map((m, idx) => (
+                                <div key={idx} className={m.role === 'user' ? 'flex justify-end' : 'flex justify-start'}>
+                                    <div className={m.role === 'user' ? 'max-w-[85%] gradient-blue text-white px-3 py-2 rounded-xl rounded-br-sm shadow' : 'max-w-[85%] bg-white/90 text-gray-800 px-3 py-2 rounded-xl rounded-bl-sm shadow border border-white/40'}>
+                                        {m.text}
+                                    </div>
+                                </div>
+                            ))}
+                            {isThinking && (
+                                <div className="flex justify-start">
+                                    <div className="max-w-[85%] bg-white/90 text-gray-800 px-3 py-2 rounded-xl rounded-bl-sm shadow border border-white/40">
+                                        <span className="inline-flex items-center gap-2">
+                                            <svg className="w-4 h-4 text-indigo-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /></svg>
+                                            Thinking...
+                                        </span>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                        <form onSubmit={sendAiMessage} className="mt-4 flex items-center gap-2">
+                            <input
+                                type="text"
+                                value={aiInput}
+                                onChange={(e) => setAiInput(e.target.value)}
+                                placeholder="Ask me about jobs, communities, or support..."
+                                className="flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white/80"
+                            />
+                            <button
+                                type="submit"
+                                disabled={isThinking}
+                                className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-3 rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow disabled:opacity-60"
+                            >
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                    <div className="w-full lg:max-w-sm">
+                        <div className="bg-white/80 rounded-2xl border border-white/30 shadow p-4">
+                            <h3 className="font-semibold text-gray-800 mb-2">Try asking:</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {["Show me remote jobs","What communities can I join?","How do I get support?","Jobs with flexible hours"].map((q, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => { setAiInput(q); setTimeout(() => sendAiMessage(), 0) }}
+                                        className="px-3 py-2 rounded-lg bg-indigo-50 text-indigo-700 hover:bg-indigo-100 text-sm"
+                                    >
+                                        {q}
+                                    </button>
+                                ))}
+                            </div>
+                            <div className="mt-4 text-xs text-gray-500">
+                                Responses are AI-generated for guidance. For detailed info, see Jobs or Communities.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

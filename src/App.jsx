@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar'
 import Home from './modules/Home'
 import Jobs from './modules/Jobs'
 import Communities from './modules/Communities'
+import AIAgent from './modules/AIAgent'
 import CommunityDetail from './modules/CommunityDetail'
 import PostDetail from './modules/PostDetail'
 
@@ -39,6 +40,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/jobs" element={<Jobs />} />
+                            <Route path="/ai" element={<AIAgent />} />
                             <Route path="/communities" element={<Communities />} />
                             <Route path="/communities/:id" element={<CommunityDetail />} />
                             <Route path="/communities/:communityId/posts/:postId" element={<PostDetail />} />
