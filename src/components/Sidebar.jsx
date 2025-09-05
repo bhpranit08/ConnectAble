@@ -14,7 +14,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 </svg>
             )
         },
-        {
+        {   
             name: 'Jobs',
             path: '/jobs',
             icon: (
