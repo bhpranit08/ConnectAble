@@ -5,6 +5,8 @@ import Sidebar from './components/Sidebar';
 import Home from './modules/Home';
 import Jobs from './modules/Jobs';
 import Communities from './modules/Communities';
+import CommunityDetail from './modules/CommunityDetail';
+import PostDetail from './modules/PostDetail';
 
 function App() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -35,9 +37,11 @@ function App() {
 
                     <main className="flex-1 overflow-y-auto relative z-10">
                         <Routes>
-                            <Route path="/*" element={<Home />} />
+                            <Route path="/" element={<Home />} />
                             <Route path="/jobs" element={<Jobs />} />
                             <Route path="/communities" element={<Communities />} />
+                            <Route path="/communities/:id" element={<CommunityDetail />} />
+                            <Route path="/communities/:communityId/posts/:postId" element={<PostDetail />} />
                         </Routes>
                     </main>
                 </div>
