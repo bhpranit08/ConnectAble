@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const Sidebar = ({ isOpen, onClose }) => {
-    const location = useLocation();
+    const location = useLocation()
 
     const menuItems = [
         {
@@ -32,7 +32,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 </svg>
             )
         }
-    ];
+    ]
 
     return (
         <>
@@ -44,16 +44,23 @@ const Sidebar = ({ isOpen, onClose }) => {
             )}
             
             <div className={`
-                fixed lg:static inset-y-0 left-0 z-30 w-64 bg-gray-800 text-white min-h-screen
-                transform transition-transform duration-300 ease-in-out
+                fixed lg:static inset-y-0 left-0 z-30 w-64 gradient-bg text-white min-h-screen
+                transform transition-transform duration-300 ease-in-out shadow-2xl
                 ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
             `}>
                 <div className="p-4 lg:p-6">
                     <div className="flex items-center justify-between">
-                        <h1 className="text-xl lg:text-2xl font-bold text-white">ConnectAble</h1>
+                        <div className="flex items-center space-x-2">
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                                </svg>
+                            </div>
+                            <h1 className="text-xl lg:text-2xl font-bold text-white">ConnectAble</h1>
+                        </div>
                         <button
                             onClick={onClose}
-                            className="lg:hidden text-gray-300 hover:text-white"
+                            className="lg:hidden text-white/70 hover:text-white transition-colors duration-200 p-1"
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -68,22 +75,35 @@ const Sidebar = ({ isOpen, onClose }) => {
                                 <Link
                                     to={item.path}
                                     onClick={onClose}
-                                    className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors duration-200 ${
+                                    className={`flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group ${
                                         location.pathname === item.path
-                                            ? 'bg-gray-700 text-white'
-                                            : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                                            ? 'bg-white/20 text-white shadow-lg backdrop-blur-sm'
+                                            : 'text-white/80 hover:bg-white/10 hover:text-white'
                                     }`}
                                 >
-                                    <span className="mr-3">{item.icon}</span>
+                                    <span className={`mr-3 transition-transform duration-200 ${
+                                        location.pathname === item.path ? 'scale-110' : 'group-hover:scale-105'
+                                    }`}>
+                                        {item.icon}
+                                    </span>
                                     {item.name}
                                 </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
+                
+                <div className="absolute bottom-6 left-3 right-3">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <p className="text-white/80 text-sm mb-2">Need Help?</p>
+                        <button className="text-white text-sm font-medium hover:text-white/80 transition-colors duration-200">
+                            Contact Support
+                        </button>
+                    </div>
+                </div>
             </div>
         </>
-    );
-};
+    )
+}
 
-export default Sidebar;
+export default Sidebar

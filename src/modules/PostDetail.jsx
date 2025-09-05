@@ -81,9 +81,9 @@ const PostDetail = () => {
             <div className="mb-6">
                 <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-4">
                     <Link to="/communities" className="hover:text-blue-600">Communities</Link>
-                    <span>></span>
+                    <span></span>
                     <Link to={`/communities/${communityId}`} className="hover:text-blue-600">{community.name}</Link>
-                    <span>></span>
+                    <span></span>
                     <span className="text-gray-800">Post</span>
                 </nav>
             </div>

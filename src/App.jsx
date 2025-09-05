@@ -1,36 +1,36 @@
 
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Home from './modules/Home';
-import Jobs from './modules/Jobs';
-import Communities from './modules/Communities';
-import CommunityDetail from './modules/CommunityDetail';
-import PostDetail from './modules/PostDetail';
+import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Sidebar from './components/Sidebar'
+import Home from './modules/Home'
+import Jobs from './modules/Jobs'
+import Communities from './modules/Communities'
+import CommunityDetail from './modules/CommunityDetail'
+import PostDetail from './modules/PostDetail'
 
 function App() {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(false)
 
-    const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-    const closeSidebar = () => setSidebarOpen(false);
+    const toggleSidebar = () => setSidebarOpen(!sidebarOpen)
+    const closeSidebar = () => setSidebarOpen(false)
 
     return (
         <Router>
-            <div className="flex h-screen bg-gray-100">
+            <div className="flex h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
                 <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
                 
                 <div className="flex-1 flex flex-col lg:ml-0 relative z-10">
-                    <header className="lg:hidden bg-white shadow-sm border-b border-gray-200 px-4 py-3 relative z-20">
+                    <header className="lg:hidden glass-effect shadow-lg border-b border-white/20 px-4 py-3 relative z-20">
                         <div className="flex items-center justify-between">
                             <button
                                 onClick={toggleSidebar}
-                                className="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2"
+                                className="text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-2 transition-colors duration-200"
                             >
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             </button>
-                            <h1 className="text-lg font-semibold text-gray-800">ConnectAble</h1>
+                            <h1 className="text-lg font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">ConnectAble</h1>
                             <div className="w-10"></div>
                         </div>
                     </header>
@@ -47,7 +47,7 @@ function App() {
                 </div>
             </div>
         </Router>
-    );
+    )
 }
 
-export default App;
+export default App
