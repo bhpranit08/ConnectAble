@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import { jobListings } from '../data/jobListings'
 
+import ReactMarkdown from "react-markdown"
+
 const AIAgent = () => {
     const [messages, setMessages] = useState([
         { role: 'assistant', text: 'Hello! I\'m your AI agent. Ask about jobs, communities, or support.' }
@@ -33,7 +35,6 @@ const AIAgent = () => {
     }, [resolvedKey])
 
     const siteData = useMemo(() => {
-        // Aggregate all exports from files in src/data (objects/arrays only)
         const modules = import.meta.glob('../data/**/*.{js,json}', { eager: true })
         const aggregated = { jobs: jobListings }
         Object.entries(modules).forEach(([, mod]) => {
@@ -134,14 +135,15 @@ User message: ${text}`
                         </div>
                         <div ref={scrollRef} className="bg-white/80 rounded-2xl border border-white/30 shadow-inner p-4 sm:p-5 h-[28rem] overflow-y-auto space-y-4">
                             {messages.map((m, i) => (
-                                <div key={i} className={(m.role === 'user' ? 'flex justify-end' : 'flex justify-start') + ' animate-slide-up'}>
-                                    <div className={(m.role === 'user' ? 'flex items-end space-x-2' : 'flex items-end space-x-2 flex-row-reverse') + ''}>
-                                        <div className={m.role === 'user' ? 'w-7 h-7 rounded-full gradient-blue shadow' : 'w-7 h-7 rounded-full gradient-purple shadow'}></div>
-                                        <div className={m.role === 'user' ? 'max-w-[75%] gradient-blue text-white px-3 py-2 rounded-xl rounded-br-sm shadow transition-transform duration-200 hover:scale-[1.01]' : 'max-w-[75%] bg-white/90 text-gray-800 px-3 py-2 rounded-xl rounded-bl-sm shadow border border-white/40 transition-transform duration-200 hover:scale-[1.01]'}>
-                                            {m.text}
-                                        </div>
-                                    </div>
-                                </div>
+                                <div
+                                className={
+                                  m.role === "user"
+                                    ? "max-w-[75%] gradient-blue text-white px-3 py-2 rounded-xl rounded-br-sm shadow transition-transform duration-200 hover:scale-[1.01]"
+                                    : "max-w-[75%] bg-white/90 text-gray-800 px-3 py-2 rounded-xl rounded-bl-sm shadow border border-white/40 transition-transform duration-200 hover:scale-[1.01]"
+                                }
+                              >
+                                <ReactMarkdown>{m.text}</ReactMarkdown>
+                              </div>
                             ))}
                             {thinking && (
                                 <div className="flex justify-start">
